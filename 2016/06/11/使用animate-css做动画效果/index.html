@@ -1,0 +1,686 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="animation," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Animate.css是一个很好的css动画库，但是由于浏览器支持原因，所以只支持ie10+的浏览器，所以一般都用在移动端。
+ANIMATE.CSS 和 WOW.JS最经典好用的组合：
+&amp;lt;section class=&amp;quot;wow slideInLeft&amp;quot;&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;section class=&amp;quot;wow slideInRight&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用animate.css做动画效果">
+<meta property="og:url" content="http://yoursite.com/2016/06/11/使用animate-css做动画效果/index.html">
+<meta property="og:site_name" content="Snake Bang 的小本本">
+<meta property="og:description" content="Animate.css是一个很好的css动画库，但是由于浏览器支持原因，所以只支持ie10+的浏览器，所以一般都用在移动端。
+ANIMATE.CSS 和 WOW.JS最经典好用的组合：
+&amp;lt;section class=&amp;quot;wow slideInLeft&amp;quot;&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;section class=&amp;quot;wow slideInRight&amp;">
+<meta property="og:updated_time" content="2016-07-11T12:49:00.154Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用animate.css做动画效果">
+<meta name="twitter:description" content="Animate.css是一个很好的css动画库，但是由于浏览器支持原因，所以只支持ie10+的浏览器，所以一般都用在移动端。
+ANIMATE.CSS 和 WOW.JS最经典好用的组合：
+&amp;lt;section class=&amp;quot;wow slideInLeft&amp;quot;&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;section class=&amp;quot;wow slideInRight&amp;">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/11/使用animate-css做动画效果/"/>
+
+  <title> 使用animate.css做动画效果 | Snake Bang 的小本本 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Snake Bang 的小本本</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">写下的也许不是知识，但它是我的汗水</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用animate.css做动画效果
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-11T11:43:29+08:00" content="2016-06-11">
+              2016-06-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/animate/" itemprop="url" rel="index">
+                    <span itemprop="name">animate</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/11/使用animate-css做动画效果/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/11/使用animate-css做动画效果/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Animate.css是一个很好的css动画库，但是由于浏览器支持原因，所以只支持ie10+的浏览器，所以一般都用在移动端。</p>
+<h2 id="ANIMATE-CSS-和-WOW-JS"><a href="#ANIMATE-CSS-和-WOW-JS" class="headerlink" title="ANIMATE.CSS 和 WOW.JS"></a>ANIMATE.CSS 和 WOW.JS</h2><p>最经典好用的组合：</p>
+<pre><code>&lt;section class=&quot;wow slideInLeft&quot;&gt;&lt;/section&gt;
+&lt;section class=&quot;wow slideInRight&quot;&gt;&lt;/section&gt;
+</code></pre><p>然后使用 new WOW.init()<br>复杂一点的用法：</p>
+<pre><code>var wow = new WOW(
+  {
+    boxClass:     &apos;wow&apos;,      // animated element css class (default is wow)
+    animateClass: &apos;animated&apos;, // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();
+</code></pre><p>简单一点的用法：</p>
+<pre><code>&lt;section class=&quot;wow slideInLeft&quot; data-wow-duration=&quot;2s&quot; data-wow-delay=&quot;5s&quot;&gt;&lt;/section&gt;
+&lt;section class=&quot;wow slideInRight&quot; data-wow-offset=&quot;10&quot;  data-wow-iteration=&quot;10&quot;&gt;&lt;/section&gt;
+</code></pre><p>data-wow-offset设置元素离window顶端距离多少开始执行动画，data-wow-iteration设置动画执行次数，data-wow-delay、data-wow-duration分别设置元素动画执行的延迟和执行时长，要带单位s。</p>
+<p>没什么过多的用法，但是效果确实很好看。</p>
+<h2 id="单独使用ANIMATE-CSS"><a href="#单独使用ANIMATE-CSS" class="headerlink" title="单独使用ANIMATE.CSS"></a>单独使用ANIMATE.CSS</h2><p>单独使用animate.css的话，和之前配合wow使用是不一样。</p>
+<pre><code>&lt;section class=&quot;animated bounceInLeft&quot;&gt;&lt;/section&gt;
+</code></pre><p>这个是直接执行，而且只有一遍，打开网页马上就执行了。一般不是我们要的效果，怎么样控制它的执行呢？可以有两种方法：</p>
+<p>使用 display：none;<br>一般我们开始不希望某个元素出现，所以在它的css上设置display：none，然后我们在需要它出现的时候修改它的display为其他的值，只要不是none，它都会用动画的效果出现。</p>
+<p>滞后添加动画类，如果希望元素之前就已经出现了，但是再出现以后是有一个动画效果，比如bounce抖动一下啊什么的，你就可以这么置：</p>
+<pre><code>&lt;section class=&quot;animated&quot;&gt;&lt;/section&gt;
+</code></pre><p>然后在你需要的时候，添加一个动画class上去，比如bounce，那么它就会立马执行一次动画效果。但是根据不同的元素添加不同的class操作起来比较麻烦，所以我们可在用data属性存储要使用的class：</p>
+<pre><code>&lt;section id=&quot;anyid&quot; class=&quot;animated&quot; data-animate=&quot;bounceInLeft&quot;&gt;&lt;/section&gt;
+</code></pre><p>在需要的时候，用document.getElementById(“anyid”).dataset[“animate”]来获取存储在元素上的数据。之后再添加到元素的classList中，就可以了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/animation/" rel="tag">#animation</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/08/面试常见题-数组去重/" rel="next" title="面试常见题-数组去重">
+                <i class="fa fa-chevron-left"></i> 面试常见题-数组去重
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/12/javascript判断图片是否加载/" rel="prev" title="javascript判断图片是否加载">
+                javascript判断图片是否加载 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/11/使用animate-css做动画效果/"
+           data-title="使用animate.css做动画效果" data-url="http://yoursite.com/2016/06/11/使用animate-css做动画效果/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Snake Bang" />
+          <p class="site-author-name" itemprop="name">Snake Bang</p>
+          <p class="site-description motion-element" itemprop="description">你不能改变你的过去，但你可以让你的未来变得更美好,一旦时间浪费了，生命就浪费了。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ANIMATE-CSS-和-WOW-JS"><span class="nav-number">1.</span> <span class="nav-text">ANIMATE.CSS 和 WOW.JS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单独使用ANIMATE-CSS"><span class="nav-number">2.</span> <span class="nav-text">单独使用ANIMATE.CSS</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Snake Bang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"snakebang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本来我只是想判定一下网页是否滚动到了网页的底部，结果就在这么小的一个问题上，纠结了我好半天，我整个人都被搞懵了，本来用jquery可以很简单的解决这个问题，但是我偏要用js：
+网页的高度一般来讲，我们都用$(“body”).height()就可以很简单的获取到网页的高度，用js就是document.body.clientHeight;这样真的非常正确，超级简单。 以某个网站为例：
+document">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页中的宽高">
+<meta property="og:url" content="http://yoursite.com/2016/06/24/网页中的宽高/index.html">
+<meta property="og:site_name" content="Snake Bang 的小本本">
+<meta property="og:description" content="本来我只是想判定一下网页是否滚动到了网页的底部，结果就在这么小的一个问题上，纠结了我好半天，我整个人都被搞懵了，本来用jquery可以很简单的解决这个问题，但是我偏要用js：
+网页的高度一般来讲，我们都用$(“body”).height()就可以很简单的获取到网页的高度，用js就是document.body.clientHeight;这样真的非常正确，超级简单。 以某个网站为例：
+document">
+<meta property="og:updated_time" content="2016-07-11T13:16:01.594Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网页中的宽高">
+<meta name="twitter:description" content="本来我只是想判定一下网页是否滚动到了网页的底部，结果就在这么小的一个问题上，纠结了我好半天，我整个人都被搞懵了，本来用jquery可以很简单的解决这个问题，但是我偏要用js：
+网页的高度一般来讲，我们都用$(“body”).height()就可以很简单的获取到网页的高度，用js就是document.body.clientHeight;这样真的非常正确，超级简单。 以某个网站为例：
+document">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/24/网页中的宽高/"/>
+
+  <title> 网页中的宽高 | Snake Bang 的小本本 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Snake Bang 的小本本</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">写下的也许不是知识，但它是我的汗水</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                网页中的宽高
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-24T11:53:47+08:00" content="2016-06-24">
+              2016-06-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/24/网页中的宽高/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/24/网页中的宽高/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本来我只是想判定一下网页是否滚动到了网页的底部，结果就在这么小的一个问题上，纠结了我好半天，我整个人都被搞懵了，本来用jquery可以很简单的解决这个问题，但是我偏要用js：</p>
+<h2 id="网页的高度"><a href="#网页的高度" class="headerlink" title="网页的高度"></a>网页的高度</h2><p>一般来讲，我们都用$(“body”).height()就可以很简单的获取到网页的高度，用js就是document.body.clientHeight;这样真的非常正确，超级简单。 以某个网站为例：</p>
+<pre><code>document.body.clientHeight
+4992
+$(&quot;body&quot;).height()
+4992
+</code></pre><p>很好。</p>
+<p>然后，我们可以用$(“body”).scrollTop()或者$(window).scrollTop()来获取当前页面的滚动高度，用js的话就是 document.body.scrollTop,差不多，注意js的是属性，而jq的是方法，我把网页拉到了最底端：</p>
+<pre><code>document.body.scrollTop
+4304
+$(&quot;body&quot;).scrollTop()
+4304
+$(window).scrollTop()
+4304
+</code></pre><p>很好。<br>我再来获取滚动条的高度，也就是当前网页窗口的高度：</p>
+<pre><code>window.innerHeight
+705
+</code></pre><p>我是这么想的，网页的滚动距离加上滚动条的高度等于网页的高的话就是到底端了，这样想好像并没有什么问题,但是问题来了，我这么一算：</p>
+<pre><code>4304 + 705 = 5009 ！= 4992
+</code></pre><p>我就纳闷了好半天，是不是我哪里想错了？我就去查，查到了这个：</p>
+<pre><code>var s = &quot;网页可见区域宽 ：&quot;+ document.body.clientWidth;  
+s += &quot;网页可见区域高：&quot;+ document.body.clientHeight;   
+s += &quot;网页可见区域高：&quot;+ document.body.offsetHeight +&quot; (包括边线的宽)&quot;;  
+s += &quot;网页正文全文宽：&quot;+ document.body.scrollWidth;  
+s += &quot;网页正文全文高：&quot;+ document.body.scrollHeight;  
+s += &quot;网页被卷去的高：&quot;+ document.body.scrollTop;  
+s += &quot;网页被卷去的左：&quot;+ document.body.scrollLeft;  
+s += &quot;网页正文部分上：&quot;+ window.screenTop;  
+s += &quot;网页正文部分左：&quot;+ window.screenLeft;  
+s += &quot;屏幕分辨率的高：&quot;+ window.screen.height;  
+s += &quot;屏幕分辨率的宽：&quot;+ window.screen.width;  
+s += &quot;屏幕可用工作区高度：&quot;+window.screen.availHeight;  
+s += &quot;屏幕可用工作区宽度：&quot;+window.screen.availWidth;
+</code></pre><p>运行结果是这样的：</p>
+<pre><code>网页可见区域宽 ：831
+网页可见区域高：4992
+网页可见区域高：4992 (包括边线的宽)
+网页正文全文宽：831
+网页正文全文高：5009
+网页被卷去的高：4304
+网页被卷去的左：0
+网页正文部分上：0
+网页正文部分左：0
+屏幕分辨率的高：768
+屏幕分辨率的宽：1366
+屏幕可用工作区高度：768
+屏幕可用工作区宽度：1366
+</code></pre><p>结果显而易见，问题在于window.body.scrollHeight;<br>这个属性jq里面是没有的。解释为正文全文高，我不是很懂;<br>但是只要我用这个来计算是否到达底部就会得到我想要的结果了。</p>
+<p>可是问题又来了，我换了一个浏览器，浏览相通的网页，还是拉到最底端，</p>
+<pre><code>网页可见区域宽 ：831
+网页可见区域高：4992
+网页可见区域高：4992(包括边线的宽)
+网页正文全文宽：831
+网页正文全文高：5024
+网页被卷去的高：4326
+网页被卷去的左：0
+网页正文部分上：0
+网页正文部分左：0
+屏幕分辨率的高：768
+屏幕分辨率的宽：1366
+屏幕可用工作区高度：768
+屏幕可用工作区宽度：1366
+</code></pre><p>我发现window.body.scrollTop 和 window.body.scrollHeight 都变了，也就是是说这两个属性虽然是body上的属性，但是它还是会根据浏览器的不同发生变化，当然window.innerHeight 也会发生变化。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实出现这样的问题，最终的原因还是在于body自身会受到内部元素的影响，window.body.clientHeight 和 window.body.scrollTop 不同的原因，就是因为可能在body的首个或者末端的元素设置了margin,让body的实际高度变小了。</p>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>判断网页的高度不可以用jq中的$(“body”).height() 而应该用 $(document).height(),$(document).height() 与 document.body.scrollHeight 结果是一致的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/20/JS的迭代方法/" rel="next" title="JS的迭代方法">
+                <i class="fa fa-chevron-left"></i> JS的迭代方法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/26/JSON-与-JSONP-入门理解/" rel="prev" title="JSON 与 JSONP 入门理解">
+                JSON 与 JSONP 入门理解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/24/网页中的宽高/"
+           data-title="网页中的宽高" data-url="http://yoursite.com/2016/06/24/网页中的宽高/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Snake Bang" />
+          <p class="site-author-name" itemprop="name">Snake Bang</p>
+          <p class="site-description motion-element" itemprop="description">你不能改变你的过去，但你可以让你的未来变得更美好,一旦时间浪费了，生命就浪费了。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网页的高度"><span class="nav-number">1.</span> <span class="nav-text">网页的高度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新"><span class="nav-number">3.</span> <span class="nav-text">更新</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Snake Bang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"snakebang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

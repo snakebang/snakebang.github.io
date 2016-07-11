@@ -1,0 +1,697 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="随笔," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="今天是六月的最后一天啦，这是就我本月的最后一篇博客了。这个博客也是在本月开始写的，本来还想一天写一篇的，还是有点坚持不下来，因为真的没有什么好些的，而且六月又是考试月，要复习功课的。但还是不错的，写了十几篇了，为自己鼓掌加油。
+PHP中PDO的预处理语句昨天在这个上面卡了好久啊，真个人都不好了，我用的是编辑器写php，语法全部是正确的，但就是运行不了，只能一步一步的改写再测试。一开始我是这么写的：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="6月30日的学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/06/30/6月30日的学习笔记/index.html">
+<meta property="og:site_name" content="Snake Bang 的小本本">
+<meta property="og:description" content="今天是六月的最后一天啦，这是就我本月的最后一篇博客了。这个博客也是在本月开始写的，本来还想一天写一篇的，还是有点坚持不下来，因为真的没有什么好些的，而且六月又是考试月，要复习功课的。但还是不错的，写了十几篇了，为自己鼓掌加油。
+PHP中PDO的预处理语句昨天在这个上面卡了好久啊，真个人都不好了，我用的是编辑器写php，语法全部是正确的，但就是运行不了，只能一步一步的改写再测试。一开始我是这么写的：">
+<meta property="og:updated_time" content="2016-07-11T13:27:13.203Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="6月30日的学习笔记">
+<meta name="twitter:description" content="今天是六月的最后一天啦，这是就我本月的最后一篇博客了。这个博客也是在本月开始写的，本来还想一天写一篇的，还是有点坚持不下来，因为真的没有什么好些的，而且六月又是考试月，要复习功课的。但还是不错的，写了十几篇了，为自己鼓掌加油。
+PHP中PDO的预处理语句昨天在这个上面卡了好久啊，真个人都不好了，我用的是编辑器写php，语法全部是正确的，但就是运行不了，只能一步一步的改写再测试。一开始我是这么写的：">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/30/6月30日的学习笔记/"/>
+
+  <title> 6月30日的学习笔记 | Snake Bang 的小本本 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Snake Bang 的小本本</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">写下的也许不是知识，但它是我的汗水</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                6月30日的学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-30T23:52:56+08:00" content="2016-06-30">
+              2016-06-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/30/6月30日的学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/30/6月30日的学习笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天是六月的最后一天啦，这是就我本月的最后一篇博客了。这个博客也是在本月开始写的，本来还想一天写一篇的，还是有点坚持不下来，因为真的没有什么好些的，而且六月又是考试月，要复习功课的。但还是不错的，写了十几篇了，为自己鼓掌加油。</p>
+<h2 id="PHP中PDO的预处理语句"><a href="#PHP中PDO的预处理语句" class="headerlink" title="PHP中PDO的预处理语句"></a>PHP中PDO的预处理语句</h2><p>昨天在这个上面卡了好久啊，真个人都不好了，我用的是编辑器写php，语法全部是正确的，但就是运行不了，只能一步一步的改写再测试。<br>一开始我是这么写的：</p>
+<pre><code>$conn = new PDO(&quot;mysql:host=$server;dbname=$db&quot;,$user,$pass);
+$conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$stmt = $conn-&gt;prepare(&quot;INSERT INTO imgdemo1 (imgkey,productid,remark,del) VALUES (:imgkey,:productid,:remark,:del)&quot;);
+$stmt-&gt;bindParam(&quot;:imgkey&quot;,$key);
+$stmt-&gt;bindParam(&quot;:productid&quot;,$productid);
+$stmt-&gt;bindParam(&quot;:remark&quot;,$_POST[&quot;remark&quot;]);
+$stmt-&gt;bindParam(&quot;:del&quot;,0);
+$stmt-&gt;execute();
+</code></pre><p>我真的感觉不到任何错误，语法检测没有错误，我怕是我那个变量名写错了，我一个一个字母的看啊，就是找不出任何错误。<br>卡了大概两个小时，快到0点的时候我总算试探除了bug的原因啊。 TMD竟然传递参数的时候不能直接赋值：</p>
+<pre><code>$stmt-&gt;bindParam(&quot;:del&quot;,0); //错误，不能直接赋值为0
+$del = 0;
+$stmt-&gt;bindParam(&quot;:del&quot;,$del);//正确
+</code></pre><p>我从未见过如此丧心病狂的函数， 只怪我一个前端的不了解php后端。</p>
+<h2 id="GETBOUNDINGCLIENTRECT"><a href="#GETBOUNDINGCLIENTRECT" class="headerlink" title="GETBOUNDINGCLIENTRECT()"></a>GETBOUNDINGCLIENTRECT()</h2><p>这个是js中的方法，获取元素距离浏览器可视区域的距离：</p>
+<pre><code>document.getElementById(“id”).getBoundingClientRect();
+//返回一个ClientRect对象，有6个参数： height,width,top,bottom,left,right
+height,width:获取元素的宽和高，不推荐使用，应为在IE中只返回4个属性： top,bottom,left,right.   
+top: 返回元素上边框距离可视区域顶端的距离  
+bottom： 返回元素下边框距离可视区域顶端的距离  
+left: 返回元素左边框距离可视区域左端的距离  
+right: 返回元素右边框距离可视区域左端的距离 
+</code></pre><p>这样就可以很好的判断元素是不是进入了浏览器的可视区域了,比如：</p>
+<pre><code>obj.getBoundingClientRect().top &lt; window.innerHeight  
+//元素上边框进入了可视区域；
+obj.getBoundingClientRect().bottom &lt; window.innerHeight
+//元素下边框进去可可视区域；
+ 如果这个元素比window.innerHieht要小的话：
+obj.getBoundingClientRect().top&gt;0 &amp;&amp; obj.getBoundingClientRect().bottom &lt; window.innerHeight  
+//判断元素完全进入可视区域
+</code></pre><h2 id="判断字符串中各字符出现的次数"><a href="#判断字符串中各字符出现的次数" class="headerlink" title="判断字符串中各字符出现的次数"></a>判断字符串中各字符出现的次数</h2><pre><code>var str = &quot;abcabbbbacddcbaa&quot;; // 判断各字符出现的次数
+
+var arr = str.split(&quot;&quot;),temp = {};
+for(i=0,l=arr.length;i&lt;l;i++){
+    temp[arr[i]]?temp[arr[i]]+=1:temp[arr[i]]=1;
+}
+temp  //Object {a: 5, b: 6, c: 3, d: 2}
+</code></pre><p>简洁版本：</p>
+<pre><code>str.replace(/\w/g,function(i){
+    temp[i]?temp[i]+=1:temp[i]=1;    
+})
+</code></pre><h2 id="JQ获取被选中的RADIO，CHECKBOX的值"><a href="#JQ获取被选中的RADIO，CHECKBOX的值" class="headerlink" title="JQ获取被选中的RADIO，CHECKBOX的值"></a>JQ获取被选中的RADIO，CHECKBOX的值</h2><pre><code>$(&quot;[name=radio]:checked&quot;).val(); //获取值
+$(&quot;#id&quot;).prop(&quot;checked&quot;) //获取选中状态
+</code></pre><p>JS目标外点击事件：<br>好比一个弹出框，我们点击一个区域或者按钮弹出了对话框或者DIV，然后我们再点击body，只要点击的不是某个区域，那么我们弹出的DIV消失：</p>
+<pre><code>$(&quot;body&quot;).click(function(e){
+    var _con = $(&quot;.area&quot;);  //会触发原事件的区域
+    if(!_con.is(e.target)&amp;&amp;_con.has(e.target).length===0){
+    //判断此次点击事件的目标不是指定区域...
+    }
+})
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/随笔/" rel="tag">#随笔</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/29/AJAX提交表单的方法/" rel="next" title="AJAX提交表单的方法">
+                <i class="fa fa-chevron-left"></i> AJAX提交表单的方法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/03/网页的navbar的css设置/" rel="prev" title="网页的navbar的css设置">
+                网页的navbar的css设置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/30/6月30日的学习笔记/"
+           data-title="6月30日的学习笔记" data-url="http://yoursite.com/2016/06/30/6月30日的学习笔记/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Snake Bang" />
+          <p class="site-author-name" itemprop="name">Snake Bang</p>
+          <p class="site-description motion-element" itemprop="description">你不能改变你的过去，但你可以让你的未来变得更美好,一旦时间浪费了，生命就浪费了。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP中PDO的预处理语句"><span class="nav-number">1.</span> <span class="nav-text">PHP中PDO的预处理语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GETBOUNDINGCLIENTRECT"><span class="nav-number">2.</span> <span class="nav-text">GETBOUNDINGCLIENTRECT()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断字符串中各字符出现的次数"><span class="nav-number">3.</span> <span class="nav-text">判断字符串中各字符出现的次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JQ获取被选中的RADIO，CHECKBOX的值"><span class="nav-number">4.</span> <span class="nav-text">JQ获取被选中的RADIO，CHECKBOX的值</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Snake Bang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"snakebang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
