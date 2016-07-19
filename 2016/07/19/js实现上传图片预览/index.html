@@ -84,31 +84,19 @@
 
 
 
-<meta name="description" content="EVERY()every() 方法用于检测数组所有元素是否都符合指定条件，如果符合条件的话返回true，如果不符合条件就返回false
-arr = [1,2,3,4,5]
-function check(a){return a&amp;gt;3}
-function check2(a){return a&amp;gt;0}
-arr.every(check)  //false
-arr.every(check2) //t">
+<meta name="description" content="哇，我是真的觉得js流弊的，以前学真的不知道它内置了那么多的对象，就拿上次写的FormData来说吧，你没有去真实的实现ajax上传文件的功能，那真的你肯定就不知道FormData,就像我在segmentFault上看到别人那么肯定的回答： “ajax不能实现文件上传！” 那他肯定不知道js的内置类对象FormData了
+FileReader我真的不知道js里还有这个对象，即使现在我对他也不是很熟">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS的迭代方法">
-<meta property="og:url" content="http://yoursite.com/2016/06/20/JS的迭代方法/index.html">
+<meta property="og:title" content="js实现上传图片预览">
+<meta property="og:url" content="http://yoursite.com/2016/07/19/js实现上传图片预览/index.html">
 <meta property="og:site_name" content="Snake Bang 的小本本">
-<meta property="og:description" content="EVERY()every() 方法用于检测数组所有元素是否都符合指定条件，如果符合条件的话返回true，如果不符合条件就返回false
-arr = [1,2,3,4,5]
-function check(a){return a&amp;gt;3}
-function check2(a){return a&amp;gt;0}
-arr.every(check)  //false
-arr.every(check2) //t">
-<meta property="og:updated_time" content="2016-07-11T13:13:20.925Z">
+<meta property="og:description" content="哇，我是真的觉得js流弊的，以前学真的不知道它内置了那么多的对象，就拿上次写的FormData来说吧，你没有去真实的实现ajax上传文件的功能，那真的你肯定就不知道FormData,就像我在segmentFault上看到别人那么肯定的回答： “ajax不能实现文件上传！” 那他肯定不知道js的内置类对象FormData了
+FileReader我真的不知道js里还有这个对象，即使现在我对他也不是很熟">
+<meta property="og:updated_time" content="2016-07-19T14:35:53.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS的迭代方法">
-<meta name="twitter:description" content="EVERY()every() 方法用于检测数组所有元素是否都符合指定条件，如果符合条件的话返回true，如果不符合条件就返回false
-arr = [1,2,3,4,5]
-function check(a){return a&amp;gt;3}
-function check2(a){return a&amp;gt;0}
-arr.every(check)  //false
-arr.every(check2) //t">
+<meta name="twitter:title" content="js实现上传图片预览">
+<meta name="twitter:description" content="哇，我是真的觉得js流弊的，以前学真的不知道它内置了那么多的对象，就拿上次写的FormData来说吧，你没有去真实的实现ajax上传文件的功能，那真的你肯定就不知道FormData,就像我在segmentFault上看到别人那么肯定的回答： “ajax不能实现文件上传！” 那他肯定不知道js的内置类对象FormData了
+FileReader我真的不知道js里还有这个对象，即使现在我对他也不是很熟">
 
 
 
@@ -129,9 +117,9 @@ arr.every(check2) //t">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/20/JS的迭代方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/19/js实现上传图片预览/"/>
 
-  <title> JS的迭代方法 | Snake Bang 的小本本 </title>
+  <title> js实现上传图片预览 | Snake Bang 的小本本 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -271,7 +259,7 @@ arr.every(check2) //t">
             
             
               
-                JS的迭代方法
+                js实现上传图片预览
               
             
           </h1>
@@ -283,8 +271,8 @@ arr.every(check2) //t">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-20T13:20:04+08:00" content="2016-06-20">
-              2016-06-20
+            <time itemprop="dateCreated" datetime="2016-07-19T22:12:30+08:00" content="2016-07-19">
+              2016-07-19
             </time>
           </span>
 
@@ -313,8 +301,8 @@ arr.every(check2) //t">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/20/JS的迭代方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/20/JS的迭代方法/" itemprop="commentsCount"></span>
+                <a href="/2016/07/19/js实现上传图片预览/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/19/js实现上传图片预览/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -337,46 +325,41 @@ arr.every(check2) //t">
       
 
       
-        <h2 id="EVERY"><a href="#EVERY" class="headerlink" title="EVERY()"></a>EVERY()</h2><p>every() 方法用于检测数组所有元素是否都符合指定条件，如果符合条件的话返回true，如果不符合条件就返回false</p>
-<pre><code>arr = [1,2,3,4,5]
-function check(a){return a&gt;3}
-function check2(a){return a&gt;0}
-arr.every(check)  //false
-arr.every(check2) //true
-</code></pre><p>以函数的方式迭代来判断是否符合条件。</p>
-<h2 id="FILTER"><a href="#FILTER" class="headerlink" title="FILTER()"></a>FILTER()</h2><p>用判断条件的方式来筛选符合条件的元素：</p>
-<pre><code>arr = [1,2,3,4,5]
-function bigger(a){return a&gt;2}
-arr.filter(bigger)  //[3, 4, 5]
-</code></pre><p>返回的是被筛选后的数组。</p>
-<h2 id="FOREACH"><a href="#FOREACH" class="headerlink" title="FOREACH()"></a>FOREACH()</h2><p>迭代数组，可以在function中传入两个参数，第一个参数是元素本身，第二个参数是元素在数组中的位置：</p>
-<pre><code>arr = [1,2,3,4,5]
-arr.forEach(function(item,index){console.log(item,index)});
-</code></pre><p>返回值为：</p>
-<pre><code>1 0
-2 1
-3 2
-4 3
-5 4
-</code></pre><p>返回执行函数后的结果</p>
-<h2 id="MAP"><a href="#MAP" class="headerlink" title="MAP()"></a>MAP()</h2><p>让元素依次执行函数，然后返回新的数组：</p>
-<pre><code>arr = [1,2,3,4,5]
-arr.map(function(a){return a*a})
-[1, 4, 9, 16, 25]
-</code></pre><h2 id="REDUCE"><a href="#REDUCE" class="headerlink" title="REDUCE()"></a>REDUCE()</h2><p>reduce()必须传入两个参数，函数返回的结果在变为第一个参数与下个元素继续执行函数<br>就好比：</p>
-<pre><code>[x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)
+        <p>哇，我是真的觉得js流弊的，以前学真的不知道它内置了那么多的对象，就拿上次写的FormData来说吧，你没有去真实的实现ajax上传文件的功能，那真的你肯定就不知道FormData,就像我在segmentFault上看到别人那么肯定的回答： “ajax不能实现文件上传！” 那他肯定不知道js的内置类对象FormData了</p>
+<h2 id="FileReader"><a href="#FileReader" class="headerlink" title="FileReader"></a>FileReader</h2><p>我真的不知道js里还有这个对象，即使现在我对他也不是很熟，我只能通过他来实现js的图片上传预览。 对了，昨天我还用到了Option对象，我也从来不知道这个，option就留着下次写吧。 </p>
+<p>言归正传，那么如何利用FileReader实现图片于预览呢？</p>
+<pre><code>&lt;input type=&quot;file&quot; name=&quot;simg&quot; id=&quot;simg&quot;&gt;
+&lt;div id=&quot;img-preview&quot;&gt;&lt;/div&gt;
 
-arr = [1,2,3,4,5]
-arr.reduce(function(a,b){return a+b});
-</code></pre><p>返回值为 15<br>reduce的执行函数必须要有返回值，不然就变成了undefined与下一个参数继续执行了。</p>
-<h2 id="SOME"><a href="#SOME" class="headerlink" title="SOME()"></a>SOME()</h2><p>some()就正好与every（）相反，她也是一个迭代判断符合条件的函数，当有些元素符合（1+）这个条件时候返回true，只有都不符合条件的时候才会返回false；</p>
-<pre><code>arr = [1,2,3,4,5]
-function check(a){return a&gt;3}
-function check2(a){return a&gt;5}
-arr.every(check) //true
-arr.every(check2) //false
-</code></pre><h2 id="总结的关键"><a href="#总结的关键" class="headerlink" title="总结的关键"></a>总结的关键</h2><p>总之迭代的关键，就是return！！！函数的返回值！！！</p>
 
+var simg = document.getElementById(&quot;simg&quot;);
+simg.onchange = function(){
+    var fr = new FileReader();
+    fr.onload = function(e){
+        var str = &quot;&quot;;
+        str = &quot;&lt;img src=&apos;&quot;+e.target.result+&quot;&apos; &gt;&quot;;
+        document.getElementById(&quot;img-preview&quot;).innerHTML = str;
+    }
+    fr.readAsDataURL(simg.files[0]);
+}
+</code></pre><p>新建FileReader对象，在fr对象中的onload事件上注册function，让fr来读取input[type=”file”]的file数据，这里会是一串非常长的字符串，我们把它放在img标签的src中，那么它就会生成一张图片了。</p>
+<p>当然有的时候我们的<input type="file">需要设置mutilple属性，它允许我们上次多个文件，那么我们也可以修改这段代码为：</p>
+<pre><code>&lt;input type=&quot;file&quot; name=&quot;file[]&quot; id=&quot;file&quot; multiple&gt;
+
+document.getElementById(&quot;file&quot;).onchange = function() {
+            var str = &quot;&quot;;
+            var files = document.getElementById(&quot;file&quot;).files;
+            var count = files.length;
+            for (var i = 0; i &lt; count; i++) {
+                var fr = new FileReader();
+                fr.onload = function(e) {
+                    str = &quot;&lt;div class=\&quot;img-box\&quot;&gt;&lt;img src=&apos;&quot; + e.target.result + &quot;&apos;&gt;&lt;/div&gt;&quot;;
+                    document.getElementById(&quot;res&quot;).innerHTML += str;
+                }
+                fr.readAsDataURL(files[i]);
+            }
+        }
+</code></pre>
       
     </div>
 
@@ -407,17 +390,13 @@ arr.every(check2) //false
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/19/JS数组操作/" rel="next" title="JS数组操作">
-                <i class="fa fa-chevron-left"></i> JS数组操作
+              <a href="/2016/07/14/Prototype原型链知识/" rel="next" title="Prototype原型链知识">
+                <i class="fa fa-chevron-left"></i> Prototype原型链知识
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/24/网页中的宽高/" rel="prev" title="网页中的宽高">
-                网页中的宽高 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -443,8 +422,8 @@ arr.every(check2) //false
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/20/JS的迭代方法/"
-           data-title="JS的迭代方法" data-url="http://yoursite.com/2016/06/20/JS的迭代方法/">
+      <div class="ds-thread" data-thread-key="2016/07/19/js实现上传图片预览/"
+           data-title="js实现上传图片预览" data-url="http://yoursite.com/2016/07/19/js实现上传图片预览/">
       </div>
     
   </div>
@@ -535,7 +514,7 @@ arr.every(check2) //false
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EVERY"><span class="nav-number">1.</span> <span class="nav-text">EVERY()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FILTER"><span class="nav-number">2.</span> <span class="nav-text">FILTER()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FOREACH"><span class="nav-number">3.</span> <span class="nav-text">FOREACH()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAP"><span class="nav-number">4.</span> <span class="nav-text">MAP()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#REDUCE"><span class="nav-number">5.</span> <span class="nav-text">REDUCE()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SOME"><span class="nav-number">6.</span> <span class="nav-text">SOME()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结的关键"><span class="nav-number">7.</span> <span class="nav-text">总结的关键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#FileReader"><span class="nav-number">1.</span> <span class="nav-text">FileReader</span></a></li></ol></div>
             
           </div>
         </section>

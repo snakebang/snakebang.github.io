@@ -84,31 +84,19 @@
 
 
 
-<meta name="description" content="EVERY()every() 方法用于检测数组所有元素是否都符合指定条件，如果符合条件的话返回true，如果不符合条件就返回false
-arr = [1,2,3,4,5]
-function check(a){return a&amp;gt;3}
-function check2(a){return a&amp;gt;0}
-arr.every(check)  //false
-arr.every(check2) //t">
+<meta name="description" content="最近我看了一位前端攻城狮写的博客，写的是关于js中的原型链的知识，对于原型链，我还是知道的，这是js特有的继承特性，可以说就是因为有了prototype才有了js的继承。
+for in 循环for in 循环可以把对象的所有私有属性和继承属性都打印出来，当然这里的对象不是js变量类型中的那种变量，因为严格意义上来说js中所有的变量类型都是对象，他们拥有很多种不同的继承方法，toString()就是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS的迭代方法">
-<meta property="og:url" content="http://yoursite.com/2016/06/20/JS的迭代方法/index.html">
+<meta property="og:title" content="Prototype原型链知识">
+<meta property="og:url" content="http://yoursite.com/2016/07/14/Prototype原型链知识/index.html">
 <meta property="og:site_name" content="Snake Bang 的小本本">
-<meta property="og:description" content="EVERY()every() 方法用于检测数组所有元素是否都符合指定条件，如果符合条件的话返回true，如果不符合条件就返回false
-arr = [1,2,3,4,5]
-function check(a){return a&amp;gt;3}
-function check2(a){return a&amp;gt;0}
-arr.every(check)  //false
-arr.every(check2) //t">
-<meta property="og:updated_time" content="2016-07-11T13:13:20.925Z">
+<meta property="og:description" content="最近我看了一位前端攻城狮写的博客，写的是关于js中的原型链的知识，对于原型链，我还是知道的，这是js特有的继承特性，可以说就是因为有了prototype才有了js的继承。
+for in 循环for in 循环可以把对象的所有私有属性和继承属性都打印出来，当然这里的对象不是js变量类型中的那种变量，因为严格意义上来说js中所有的变量类型都是对象，他们拥有很多种不同的继承方法，toString()就是">
+<meta property="og:updated_time" content="2016-07-13T17:04:17.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS的迭代方法">
-<meta name="twitter:description" content="EVERY()every() 方法用于检测数组所有元素是否都符合指定条件，如果符合条件的话返回true，如果不符合条件就返回false
-arr = [1,2,3,4,5]
-function check(a){return a&amp;gt;3}
-function check2(a){return a&amp;gt;0}
-arr.every(check)  //false
-arr.every(check2) //t">
+<meta name="twitter:title" content="Prototype原型链知识">
+<meta name="twitter:description" content="最近我看了一位前端攻城狮写的博客，写的是关于js中的原型链的知识，对于原型链，我还是知道的，这是js特有的继承特性，可以说就是因为有了prototype才有了js的继承。
+for in 循环for in 循环可以把对象的所有私有属性和继承属性都打印出来，当然这里的对象不是js变量类型中的那种变量，因为严格意义上来说js中所有的变量类型都是对象，他们拥有很多种不同的继承方法，toString()就是">
 
 
 
@@ -129,9 +117,9 @@ arr.every(check2) //t">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/20/JS的迭代方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/14/Prototype原型链知识/"/>
 
-  <title> JS的迭代方法 | Snake Bang 的小本本 </title>
+  <title> Prototype原型链知识 | Snake Bang 的小本本 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -271,7 +259,7 @@ arr.every(check2) //t">
             
             
               
-                JS的迭代方法
+                Prototype原型链知识
               
             
           </h1>
@@ -283,8 +271,8 @@ arr.every(check2) //t">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-20T13:20:04+08:00" content="2016-06-20">
-              2016-06-20
+            <time itemprop="dateCreated" datetime="2016-07-14T00:21:31+08:00" content="2016-07-14">
+              2016-07-14
             </time>
           </span>
 
@@ -313,8 +301,8 @@ arr.every(check2) //t">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/20/JS的迭代方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/20/JS的迭代方法/" itemprop="commentsCount"></span>
+                <a href="/2016/07/14/Prototype原型链知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/14/Prototype原型链知识/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -337,45 +325,39 @@ arr.every(check2) //t">
       
 
       
-        <h2 id="EVERY"><a href="#EVERY" class="headerlink" title="EVERY()"></a>EVERY()</h2><p>every() 方法用于检测数组所有元素是否都符合指定条件，如果符合条件的话返回true，如果不符合条件就返回false</p>
-<pre><code>arr = [1,2,3,4,5]
-function check(a){return a&gt;3}
-function check2(a){return a&gt;0}
-arr.every(check)  //false
-arr.every(check2) //true
-</code></pre><p>以函数的方式迭代来判断是否符合条件。</p>
-<h2 id="FILTER"><a href="#FILTER" class="headerlink" title="FILTER()"></a>FILTER()</h2><p>用判断条件的方式来筛选符合条件的元素：</p>
-<pre><code>arr = [1,2,3,4,5]
-function bigger(a){return a&gt;2}
-arr.filter(bigger)  //[3, 4, 5]
-</code></pre><p>返回的是被筛选后的数组。</p>
-<h2 id="FOREACH"><a href="#FOREACH" class="headerlink" title="FOREACH()"></a>FOREACH()</h2><p>迭代数组，可以在function中传入两个参数，第一个参数是元素本身，第二个参数是元素在数组中的位置：</p>
-<pre><code>arr = [1,2,3,4,5]
-arr.forEach(function(item,index){console.log(item,index)});
-</code></pre><p>返回值为：</p>
-<pre><code>1 0
-2 1
-3 2
-4 3
-5 4
-</code></pre><p>返回执行函数后的结果</p>
-<h2 id="MAP"><a href="#MAP" class="headerlink" title="MAP()"></a>MAP()</h2><p>让元素依次执行函数，然后返回新的数组：</p>
-<pre><code>arr = [1,2,3,4,5]
-arr.map(function(a){return a*a})
-[1, 4, 9, 16, 25]
-</code></pre><h2 id="REDUCE"><a href="#REDUCE" class="headerlink" title="REDUCE()"></a>REDUCE()</h2><p>reduce()必须传入两个参数，函数返回的结果在变为第一个参数与下个元素继续执行函数<br>就好比：</p>
-<pre><code>[x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)
-
-arr = [1,2,3,4,5]
-arr.reduce(function(a,b){return a+b});
-</code></pre><p>返回值为 15<br>reduce的执行函数必须要有返回值，不然就变成了undefined与下一个参数继续执行了。</p>
-<h2 id="SOME"><a href="#SOME" class="headerlink" title="SOME()"></a>SOME()</h2><p>some()就正好与every（）相反，她也是一个迭代判断符合条件的函数，当有些元素符合（1+）这个条件时候返回true，只有都不符合条件的时候才会返回false；</p>
-<pre><code>arr = [1,2,3,4,5]
-function check(a){return a&gt;3}
-function check2(a){return a&gt;5}
-arr.every(check) //true
-arr.every(check2) //false
-</code></pre><h2 id="总结的关键"><a href="#总结的关键" class="headerlink" title="总结的关键"></a>总结的关键</h2><p>总之迭代的关键，就是return！！！函数的返回值！！！</p>
+        <p>最近我看了一位前端攻城狮写的博客，写的是关于js中的原型链的知识，对于原型链，我还是知道的，这是js特有的继承特性，可以说就是因为有了prototype才有了js的继承。</p>
+<h2 id="for-in-循环"><a href="#for-in-循环" class="headerlink" title="for in 循环"></a>for in 循环</h2><p>for in 循环可以把对象的所有私有属性和继承属性都打印出来，当然这里的对象不是js变量类型中的那种变量，因为严格意义上来说js中所有的变量类型都是对象，他们拥有很多种不同的继承方法，toString()就是其中之一。   </p>
+<p>有时候我们只需要对象的私有方法，则我们需要在for in循环中添加额外的判断语句： hasOwnProperty()</p>
+<pre><code>for(var i in obj) {
+    if(obj.hasOwnProperty(i)) {
+        console.log(i);
+    }
+}
+</code></pre><p>这种方法可以打印对象的私有属性。</p>
+<h2 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h2><p>prototype实际上也是一个js对象，我们可以在这个对象上添加新的方法，让它的构造函数及其后代都拥有这种方法。</p>
+<pre><code>function a() {};
+var b = new a();
+a.prototype.plus = function(i,j){return i+j};
+b.plus(2,3);  //5
+</code></pre><h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><p>constructor用来指向调用对象的构造函数。</p>
+<pre><code>function a() {};
+var b = new a();
+b.constructor === a; //true
+a.prototype.constructor === a //true
+b.constructor.prototype.constructor === a //true
+</code></pre><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>虽然prototype是一个对象，但是我们也不可直接为他赋值。</p>
+<pre><code>function a(){};
+var b = new a();
+a.prototype = {
+    plus: function(i,j){return i+j};
+};
+a.prototype.constructor == a; //false
+b.constructor === a; //false
+</code></pre><p>真脆弱，原型链就这么断掉了，继承关系也没了，所以千万不要这么做！<br>但是万一这么做了，怎么办，其实也可以修复这种情况：</p>
+<pre><code>a.prototype.constructor = a;
+var c = new a();
+c.constructor = a; //true
+</code></pre><p>修复好了。</p>
 
       
     </div>
@@ -407,16 +389,16 @@ arr.every(check2) //false
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/19/JS数组操作/" rel="next" title="JS数组操作">
-                <i class="fa fa-chevron-left"></i> JS数组操作
+              <a href="/2016/07/10/函数声明与变量声明的提升/" rel="next" title="函数声明与变量声明的提升">
+                <i class="fa fa-chevron-left"></i> 函数声明与变量声明的提升
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/24/网页中的宽高/" rel="prev" title="网页中的宽高">
-                网页中的宽高 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/19/js实现上传图片预览/" rel="prev" title="js实现上传图片预览">
+                js实现上传图片预览 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -443,8 +425,8 @@ arr.every(check2) //false
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/20/JS的迭代方法/"
-           data-title="JS的迭代方法" data-url="http://yoursite.com/2016/06/20/JS的迭代方法/">
+      <div class="ds-thread" data-thread-key="2016/07/14/Prototype原型链知识/"
+           data-title="Prototype原型链知识" data-url="http://yoursite.com/2016/07/14/Prototype原型链知识/">
       </div>
     
   </div>
@@ -535,7 +517,7 @@ arr.every(check2) //false
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EVERY"><span class="nav-number">1.</span> <span class="nav-text">EVERY()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FILTER"><span class="nav-number">2.</span> <span class="nav-text">FILTER()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FOREACH"><span class="nav-number">3.</span> <span class="nav-text">FOREACH()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAP"><span class="nav-number">4.</span> <span class="nav-text">MAP()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#REDUCE"><span class="nav-number">5.</span> <span class="nav-text">REDUCE()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SOME"><span class="nav-number">6.</span> <span class="nav-text">SOME()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结的关键"><span class="nav-number">7.</span> <span class="nav-text">总结的关键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#for-in-循环"><span class="nav-number">1.</span> <span class="nav-text">for in 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prototype"><span class="nav-number">2.</span> <span class="nav-text">prototype</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">3.</span> <span class="nav-text">constructor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">4.</span> <span class="nav-text">注意</span></a></li></ol></div>
             
           </div>
         </section>
