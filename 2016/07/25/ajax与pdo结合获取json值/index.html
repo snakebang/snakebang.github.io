@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="js," />
+  <meta name="keywords" content="ajax," />
 
 
 
@@ -84,19 +84,25 @@
 
 
 
-<meta name="description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
+<meta name="description" content="最今在开发一个简单的购物网站，所以在自己写php代码结合mysql来做一些查询啊，上传的操作，我对php其实不太熟悉，只会写点简单的代码来和js结合，做ajax传值。
+PDO预查询以前我都是用的mysql查询，后来才知道那是非常过时的产物，后来学了一点mysqli，再后来终于还是觉得pdo最好用了。一般我都是用的pdo预查询语句：
+try {
+    $conn = new PDO(&amp;quot;m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冒泡与捕获">
-<meta property="og:url" content="http://yoursite.com/2016/06/16/冒泡与捕获/index.html">
+<meta property="og:title" content="ajax与pdo结合获取json值">
+<meta property="og:url" content="http://yoursite.com/2016/07/25/ajax与pdo结合获取json值/index.html">
 <meta property="og:site_name" content="Snake Bang 的小本本">
-<meta property="og:description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
-<meta property="og:updated_time" content="2016-07-11T13:06:49.984Z">
+<meta property="og:description" content="最今在开发一个简单的购物网站，所以在自己写php代码结合mysql来做一些查询啊，上传的操作，我对php其实不太熟悉，只会写点简单的代码来和js结合，做ajax传值。
+PDO预查询以前我都是用的mysql查询，后来才知道那是非常过时的产物，后来学了一点mysqli，再后来终于还是觉得pdo最好用了。一般我都是用的pdo预查询语句：
+try {
+    $conn = new PDO(&amp;quot;m">
+<meta property="og:updated_time" content="2016-07-25T15:02:06.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="冒泡与捕获">
-<meta name="twitter:description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
+<meta name="twitter:title" content="ajax与pdo结合获取json值">
+<meta name="twitter:description" content="最今在开发一个简单的购物网站，所以在自己写php代码结合mysql来做一些查询啊，上传的操作，我对php其实不太熟悉，只会写点简单的代码来和js结合，做ajax传值。
+PDO预查询以前我都是用的mysql查询，后来才知道那是非常过时的产物，后来学了一点mysqli，再后来终于还是觉得pdo最好用了。一般我都是用的pdo预查询语句：
+try {
+    $conn = new PDO(&amp;quot;m">
 
 
 
@@ -117,9 +123,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/16/冒泡与捕获/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/25/ajax与pdo结合获取json值/"/>
 
-  <title> 冒泡与捕获 | Snake Bang 的小本本 </title>
+  <title> ajax与pdo结合获取json值 | Snake Bang 的小本本 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +265,7 @@
             
             
               
-                冒泡与捕获
+                ajax与pdo结合获取json值
               
             
           </h1>
@@ -271,8 +277,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-16T20:01:44+08:00" content="2016-06-16">
-              2016-06-16
+            <time itemprop="dateCreated" datetime="2016-07-25T22:34:39+08:00" content="2016-07-25">
+              2016-07-25
             </time>
           </span>
 
@@ -285,8 +291,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
+                  <a href="/categories/ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">ajax</span>
                   </a>
                 </span>
 
@@ -301,8 +307,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/16/冒泡与捕获/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/冒泡与捕获/" itemprop="commentsCount"></span>
+                <a href="/2016/07/25/ajax与pdo结合获取json值/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/25/ajax与pdo结合获取json值/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,21 +331,43 @@
       
 
       
-        <p>以前看到一个面试题目： 事件处理有几个阶段，分别是什么？<br>看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？</p>
-<h2 id="事件处理三个阶段"><a href="#事件处理三个阶段" class="headerlink" title="事件处理三个阶段"></a>事件处理三个阶段</h2><p>假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里面的再执行外面的（冒泡）。最后，W3C给出了规范，定义了冒泡和捕获。并且定义了事件处理的三个阶段：</p>
-<ol>
-<li>捕获</li>
-<li>目标</li>
-<li>冒泡</li>
-</ol>
-<p>开始理解不对啊，那不是外面的执行了两遍嘛，然而并不是！</p>
-<h2 id="ADDEVENTLISTENER"><a href="#ADDEVENTLISTENER" class="headerlink" title="ADDEVENTLISTENER"></a>ADDEVENTLISTENER</h2><p>在IE8和IE8以前，IE是只支持冒泡的，比如onclick onhover attachEvent这些都是冒泡绑定事件,但是后来就有了addEventListener,这个函数最大的不同就是有第三个参数来决定是冒泡阶段发生还是捕获阶段发生。</p>
-<pre><code>addEventListener(event,handle,capture)
-</code></pre><p>第三个参数是一个布尔值，默认是false，指事件在冒泡阶段发生。设置为true时，事件会在捕获阶段发生。</p>
-<p>但是需要注意的一点，在jquery中是没有这种参数的，因为jquery只支持冒泡，所以我们需要在捕获阶段出发事件还是得用js的addEventListener。</p>
-<p>但是有时候我们不需要冒泡阶段，也就是我们在某些事件中，不需要向外扩散事件。这时候可以用W3C的标准阻止冒泡方法：</p>
-<pre><code>event.stopPropagation();
-</code></pre><p>这个函数在js和jquery中都是通用的。</p>
+        <p>最今在开发一个简单的购物网站，所以在自己写php代码结合mysql来做一些查询啊，上传的操作，我对php其实不太熟悉，只会写点简单的代码来和js结合，做ajax传值。</p>
+<h2 id="PDO预查询"><a href="#PDO预查询" class="headerlink" title="PDO预查询"></a>PDO预查询</h2><p>以前我都是用的mysql查询，后来才知道那是非常过时的产物，后来学了一点mysqli，再后来终于还是觉得pdo最好用了。一般我都是用的pdo预查询语句：</p>
+<pre><code>try {
+    $conn = new PDO(&quot;mysql:host=$server;dbname=$dbname&quot;,$username,$password);
+    $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn-&gt;prepare(&quot;select * from user where uid = :uid&quot;);
+    $stmt-&gt;bindParam(&quot;:uid&quot;,$_POST[&quot;uid&quot;]);
+    $stmt-&gt;execute();
+    $result = $stmt-&gt;fetchAll();
+}catch(PDOException $e){
+    echo $e-&gt;getMessage();
+}
+</code></pre><p>这个语句对于我来说是万能的，不管需不需要传值，我都会用这个来查询结果，其中的参数是用的$_POST[“uid”],获取查询的结果用到了fetchAll();但是其实我们一般在用ajax获取json数据的时候要加上参数 fetchAll(PDO::FETCH_ASSOC);这样才会获取到我想要的结果。</p>
+<h2 id="ajax-与-pdo"><a href="#ajax-与-pdo" class="headerlink" title="ajax 与 pdo"></a>ajax 与 pdo</h2><p>我们ajax获取的一般都是json数据格式的数据，所以我们要对上面的代码做一些小的修改：</p>
+<pre><code>try {
+    $conn = new PDO(&quot;mysql:host=$server;dbname=$dbname&quot;,$username,$password);
+    $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn-&gt;prepare(&quot;select * from user where uid = :uid&quot;);
+    $stmt-&gt;bindParam(&quot;:uid&quot;,$_POST[&quot;uid&quot;]);
+    $stmt-&gt;execute();
+    $result = $stmt-&gt;fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($result);
+}catch(PDOException $e){
+    echo $e-&gt;getMessage();
+}
+</code></pre><p>但是这样穿到js里面的值会被当作字符串，我们需要在ajax选项中添加额外的参数</p>
+<pre><code>$.ajax({
+    url: &quot;pid.php&quot;,
+    method: &quot;post&quot;,
+    data: {&quot;uid&quot;,&quot;123&quot;},
+    dataType: &quot;json&quot;
+})
+</code></pre><p>这样我们获取到的才是正常的json字符串。<br>记住： </p>
+<ul>
+<li>服务端使用 json_encode();</li>
+<li>客户端使用 dataType: “json”;</li>
+</ul>
 
       
     </div>
@@ -362,7 +390,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag">#js</a>
+            <a href="/tags/ajax/" rel="tag">#ajax</a>
           
         </div>
       
@@ -371,16 +399,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/15/使用gulp和compass结合开发项目/" rel="next" title="使用gulp和compass结合开发项目">
-                <i class="fa fa-chevron-left"></i> 使用gulp和compass结合开发项目
+              <a href="/2016/07/19/js实现上传图片预览/" rel="next" title="js实现上传图片预览">
+                <i class="fa fa-chevron-left"></i> js实现上传图片预览
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/19/JS数组操作/" rel="prev" title="JS数组操作">
-                JS数组操作 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/29/flex布局简单入门/" rel="prev" title="flex布局简单入门">
+                flex布局简单入门 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -407,8 +435,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/16/冒泡与捕获/"
-           data-title="冒泡与捕获" data-url="http://yoursite.com/2016/06/16/冒泡与捕获/">
+      <div class="ds-thread" data-thread-key="2016/07/25/ajax与pdo结合获取json值/"
+           data-title="ajax与pdo结合获取json值" data-url="http://yoursite.com/2016/07/25/ajax与pdo结合获取json值/">
       </div>
     
   </div>
@@ -499,7 +527,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理三个阶段"><span class="nav-number">1.</span> <span class="nav-text">事件处理三个阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADDEVENTLISTENER"><span class="nav-number">2.</span> <span class="nav-text">ADDEVENTLISTENER</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PDO预查询"><span class="nav-number">1.</span> <span class="nav-text">PDO预查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ajax-与-pdo"><span class="nav-number">2.</span> <span class="nav-text">ajax 与 pdo</span></a></li></ol></div>
             
           </div>
         </section>

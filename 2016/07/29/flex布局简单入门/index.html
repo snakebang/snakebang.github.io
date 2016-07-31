@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="js," />
+  <meta name="keywords" content="css," />
 
 
 
@@ -84,19 +84,27 @@
 
 
 
-<meta name="description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
+<meta name="description" content="最近看了阮一峰的flex布局教程，觉得还蛮好用的，如果以后在现代浏览器普及的情况下，可能用这个flex布局就可以更好的解决响应式网站的布局方案了，而且在现在的移动端很多都已经开始使用flex布局来进行开发了，所以我觉得学flex布局是很有必要的。
+基本概念：和坐标系相似的概念，横着的为主轴，纵向的为交叉轴，其中主轴(main axis)的默认方向为从左到右，交叉轴(cross axis)方向为从上">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冒泡与捕获">
-<meta property="og:url" content="http://yoursite.com/2016/06/16/冒泡与捕获/index.html">
+<meta property="og:title" content="flex布局简单入门">
+<meta property="og:url" content="http://yoursite.com/2016/07/29/flex布局简单入门/index.html">
 <meta property="og:site_name" content="Snake Bang 的小本本">
-<meta property="og:description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
-<meta property="og:updated_time" content="2016-07-11T13:06:49.984Z">
+<meta property="og:description" content="最近看了阮一峰的flex布局教程，觉得还蛮好用的，如果以后在现代浏览器普及的情况下，可能用这个flex布局就可以更好的解决响应式网站的布局方案了，而且在现在的移动端很多都已经开始使用flex布局来进行开发了，所以我觉得学flex布局是很有必要的。
+基本概念：和坐标系相似的概念，横着的为主轴，纵向的为交叉轴，其中主轴(main axis)的默认方向为从左到右，交叉轴(cross axis)方向为从上">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071008.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png">
+<meta property="og:updated_time" content="2016-07-29T14:12:32.358Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="冒泡与捕获">
-<meta name="twitter:description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
+<meta name="twitter:title" content="flex布局简单入门">
+<meta name="twitter:description" content="最近看了阮一峰的flex布局教程，觉得还蛮好用的，如果以后在现代浏览器普及的情况下，可能用这个flex布局就可以更好的解决响应式网站的布局方案了，而且在现在的移动端很多都已经开始使用flex布局来进行开发了，所以我觉得学flex布局是很有必要的。
+基本概念：和坐标系相似的概念，横着的为主轴，纵向的为交叉轴，其中主轴(main axis)的默认方向为从左到右，交叉轴(cross axis)方向为从上">
+<meta name="twitter:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png">
 
 
 
@@ -117,9 +125,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/16/冒泡与捕获/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/29/flex布局简单入门/"/>
 
-  <title> 冒泡与捕获 | Snake Bang 的小本本 </title>
+  <title> flex布局简单入门 | Snake Bang 的小本本 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +267,7 @@
             
             
               
-                冒泡与捕获
+                flex布局简单入门
               
             
           </h1>
@@ -271,8 +279,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-16T20:01:44+08:00" content="2016-06-16">
-              2016-06-16
+            <time itemprop="dateCreated" datetime="2016-07-29T21:30:59+08:00" content="2016-07-29">
+              2016-07-29
             </time>
           </span>
 
@@ -285,8 +293,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -301,8 +309,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/16/冒泡与捕获/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/冒泡与捕获/" itemprop="commentsCount"></span>
+                <a href="/2016/07/29/flex布局简单入门/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/29/flex布局简单入门/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,22 +333,57 @@
       
 
       
-        <p>以前看到一个面试题目： 事件处理有几个阶段，分别是什么？<br>看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？</p>
-<h2 id="事件处理三个阶段"><a href="#事件处理三个阶段" class="headerlink" title="事件处理三个阶段"></a>事件处理三个阶段</h2><p>假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里面的再执行外面的（冒泡）。最后，W3C给出了规范，定义了冒泡和捕获。并且定义了事件处理的三个阶段：</p>
-<ol>
-<li>捕获</li>
-<li>目标</li>
-<li>冒泡</li>
-</ol>
-<p>开始理解不对啊，那不是外面的执行了两遍嘛，然而并不是！</p>
-<h2 id="ADDEVENTLISTENER"><a href="#ADDEVENTLISTENER" class="headerlink" title="ADDEVENTLISTENER"></a>ADDEVENTLISTENER</h2><p>在IE8和IE8以前，IE是只支持冒泡的，比如onclick onhover attachEvent这些都是冒泡绑定事件,但是后来就有了addEventListener,这个函数最大的不同就是有第三个参数来决定是冒泡阶段发生还是捕获阶段发生。</p>
-<pre><code>addEventListener(event,handle,capture)
-</code></pre><p>第三个参数是一个布尔值，默认是false，指事件在冒泡阶段发生。设置为true时，事件会在捕获阶段发生。</p>
-<p>但是需要注意的一点，在jquery中是没有这种参数的，因为jquery只支持冒泡，所以我们需要在捕获阶段出发事件还是得用js的addEventListener。</p>
-<p>但是有时候我们不需要冒泡阶段，也就是我们在某些事件中，不需要向外扩散事件。这时候可以用W3C的标准阻止冒泡方法：</p>
-<pre><code>event.stopPropagation();
-</code></pre><p>这个函数在js和jquery中都是通用的。</p>
-
+        <p>最近看了阮一峰的flex布局教程，觉得还蛮好用的，如果以后在现代浏览器普及的情况下，可能用这个flex布局就可以更好的解决响应式网站的布局方案了，而且在现在的移动端很多都已经开始使用flex布局来进行开发了，所以我觉得学flex布局是很有必要的。</p>
+<h2 id="基本概念："><a href="#基本概念：" class="headerlink" title="基本概念："></a>基本概念：</h2><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png" alt=""><br>和坐标系相似的概念，横着的为主轴，纵向的为交叉轴，其中主轴(main axis)的默认方向为从左到右，交叉轴(cross axis)方向为从上到下。其中子元素的宽度就是 main-size 高度就是 cross-size。</p>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>flex布局需要两种元素，第一种称为容器，它的主要功能就是用来包裹一些定位的子元素，来完成我们的flex布局。<br>怎么样让一个元素作为我们的flex容易呢？</p>
+<ul>
+<li>display: flex 设置这种属性的容器会变为一个块级元素。</li>
+<li>display: inline-flex  设置这种属性的容器会变成一个inline-block元素</li>
+</ul>
+<h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h3><p>这个属性决定了主轴的方向：</p>
+<pre><code>flex-direction: row | row-reverse | column | column-reverse;
+</code></pre><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png" alt=""></p>
+<p>主轴改变的话交叉轴也会跟着改变。</p>
+<pre><code>row（默认值）：主轴为水平方向，起点在左端。
+row-reverse：主轴为水平方向，起点在右端。
+column：主轴为垂直方向，起点在上沿。
+column-reverse：主轴为垂直方向，起点在下沿
+</code></pre><h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h3><p>这个属性就好比是word-wrap一样，默认情况下word-wrap是不会自动换行的，那么flex-wrap也是一样，为了让它能在子元素占满一行时自动换到下一行，就必须要设置flex-wrap:</p>
+<pre><code>flex-wrap: nowrap | wrap | wrap-reverse;
+</code></pre><p>各值意思为：</p>
+<pre><code>nowrap ： 默认值，不换行
+wrap ： 换行
+wrap-reverse : 换行，但第一行在下面，向上叠加 
+</code></pre><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071008.jpg" alt=""></p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg" alt=""></p>
+<h3 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h3><p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</p>
+<pre><code>flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;
+</code></pre><h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h3><p>这个属性设置主轴方向的对齐方式；</p>
+<pre><code>justify-content: flex-start | flex-end | center | space-between | space-around;
+</code></pre><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png" alt=""></p>
+<pre><code>flex-start： 默认值，左对齐
+flex-end：右对齐
+center： 居中
+space-between：将剩余空间平均分配给项目之间的间隔。
+space-around：将剩余空间平均分配给项目的左右间隔。
+</code></pre><h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h3><p>设置交叉轴方向的对其方式：</p>
+<pre><code>align-items: flex-start | flex-end | center | baseline | stretch;
+</code></pre><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png" alt=""></p>
+<pre><code>flex-start：交叉轴的起点对齐。
+flex-end：交叉轴的终点对齐。
+center：交叉轴的中点对齐。
+baseline: 项目的第一行文字的基线对齐。
+stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度
+</code></pre><h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h3><p>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<pre><code>align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+</code></pre><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png" alt=""></p>
+<pre><code>flex-start：与交叉轴的起点对齐。
+flex-end：与交叉轴的终点对齐。
+center：与交叉轴的中点对齐。
+space-between：将剩余空间平均分配给项目之间的间隔。
+space-around：将剩余空间平均分配给项目的上下间隔。
+stretch（默认值）：轴线占满整个交叉轴。
+</code></pre>
       
     </div>
 
@@ -362,7 +405,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag">#js</a>
+            <a href="/tags/css/" rel="tag">#css</a>
           
         </div>
       
@@ -371,16 +414,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/15/使用gulp和compass结合开发项目/" rel="next" title="使用gulp和compass结合开发项目">
-                <i class="fa fa-chevron-left"></i> 使用gulp和compass结合开发项目
+              <a href="/2016/07/25/ajax与pdo结合获取json值/" rel="next" title="ajax与pdo结合获取json值">
+                <i class="fa fa-chevron-left"></i> ajax与pdo结合获取json值
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/19/JS数组操作/" rel="prev" title="JS数组操作">
-                JS数组操作 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/31/flex布局简单入门-二/" rel="prev" title="flex布局简单入门(二)">
+                flex布局简单入门(二) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -407,8 +450,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/16/冒泡与捕获/"
-           data-title="冒泡与捕获" data-url="http://yoursite.com/2016/06/16/冒泡与捕获/">
+      <div class="ds-thread" data-thread-key="2016/07/29/flex布局简单入门/"
+           data-title="flex布局简单入门" data-url="http://yoursite.com/2016/07/29/flex布局简单入门/">
       </div>
     
   </div>
@@ -499,7 +542,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理三个阶段"><span class="nav-number">1.</span> <span class="nav-text">事件处理三个阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADDEVENTLISTENER"><span class="nav-number">2.</span> <span class="nav-text">ADDEVENTLISTENER</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念："><span class="nav-number">1.</span> <span class="nav-text">基本概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器"><span class="nav-number">2.</span> <span class="nav-text">容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-direction"><span class="nav-number">2.1.</span> <span class="nav-text">flex-direction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-wrap"><span class="nav-number">2.2.</span> <span class="nav-text">flex-wrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-flow"><span class="nav-number">2.3.</span> <span class="nav-text">flex-flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#justify-content"><span class="nav-number">2.4.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-items"><span class="nav-number">2.5.</span> <span class="nav-text">align-items</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-content"><span class="nav-number">2.6.</span> <span class="nav-text">align-content</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

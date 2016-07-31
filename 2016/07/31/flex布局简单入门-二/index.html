@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="js," />
+  <meta name="keywords" content="css," />
 
 
 
@@ -84,19 +84,66 @@
 
 
 
-<meta name="description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
+<meta name="description" content="项目在flex布局中，容器的子元素称之为项目：item，他有6个flex属性：
+
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+
+orderorder属性定义项目的排列顺序。
+.item {
+    order: 2
+}
+order的数值越小，那么它的排列位置就越靠前：
+
+flex-growflex-grow属性定义项目的放大比例，默">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冒泡与捕获">
-<meta property="og:url" content="http://yoursite.com/2016/06/16/冒泡与捕获/index.html">
+<meta property="og:title" content="flex布局简单入门(二)">
+<meta property="og:url" content="http://yoursite.com/2016/07/31/flex布局简单入门-二/index.html">
 <meta property="og:site_name" content="Snake Bang 的小本本">
-<meta property="og:description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
-<meta property="og:updated_time" content="2016-07-11T13:06:49.984Z">
+<meta property="og:description" content="项目在flex布局中，容器的子元素称之为项目：item，他有6个flex属性：
+
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+
+orderorder属性定义项目的排列顺序。
+.item {
+    order: 2
+}
+order的数值越小，那么它的排列位置就越靠前：
+
+flex-growflex-grow属性定义项目的放大比例，默">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071014.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071016.png">
+<meta property="og:updated_time" content="2016-07-31T14:45:09.477Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="冒泡与捕获">
-<meta name="twitter:description" content="以前看到一个面试题目： 事件处理有几个阶段，分别是什么？看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？
-事件处理三个阶段假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里">
+<meta name="twitter:title" content="flex布局简单入门(二)">
+<meta name="twitter:description" content="项目在flex布局中，容器的子元素称之为项目：item，他有6个flex属性：
+
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+
+orderorder属性定义项目的排列顺序。
+.item {
+    order: 2
+}
+order的数值越小，那么它的排列位置就越靠前：
+
+flex-growflex-grow属性定义项目的放大比例，默">
+<meta name="twitter:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png">
 
 
 
@@ -117,9 +164,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/16/冒泡与捕获/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/31/flex布局简单入门-二/"/>
 
-  <title> 冒泡与捕获 | Snake Bang 的小本本 </title>
+  <title> flex布局简单入门(二) | Snake Bang 的小本本 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +306,7 @@
             
             
               
-                冒泡与捕获
+                flex布局简单入门(二)
               
             
           </h1>
@@ -271,8 +318,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-16T20:01:44+08:00" content="2016-06-16">
-              2016-06-16
+            <time itemprop="dateCreated" datetime="2016-07-31T22:31:34+08:00" content="2016-07-31">
+              2016-07-31
             </time>
           </span>
 
@@ -285,8 +332,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -301,8 +348,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/16/冒泡与捕获/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/冒泡与捕获/" itemprop="commentsCount"></span>
+                <a href="/2016/07/31/flex布局简单入门-二/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/31/flex布局简单入门-二/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,21 +372,49 @@
       
 
       
-        <p>以前看到一个面试题目： 事件处理有几个阶段，分别是什么？<br>看到这样的题，我当时真的是连题目都看不懂，不就是在DOM上绑定事件，然后触发事件吗？</p>
-<h2 id="事件处理三个阶段"><a href="#事件处理三个阶段" class="headerlink" title="事件处理三个阶段"></a>事件处理三个阶段</h2><p>假如一个div里面嵌套一个div，而且都绑定了点击事件，那么点击一下内部的div，毫无疑问两个事件都会执行的，但是哪个先执行呢？在以前的时候，不同的浏览器执行顺序是不一样的，网景公司主张外面的先执行，再执行里面的（捕获）。但是微软主张先执行里面的再执行外面的（冒泡）。最后，W3C给出了规范，定义了冒泡和捕获。并且定义了事件处理的三个阶段：</p>
-<ol>
-<li>捕获</li>
-<li>目标</li>
-<li>冒泡</li>
-</ol>
-<p>开始理解不对啊，那不是外面的执行了两遍嘛，然而并不是！</p>
-<h2 id="ADDEVENTLISTENER"><a href="#ADDEVENTLISTENER" class="headerlink" title="ADDEVENTLISTENER"></a>ADDEVENTLISTENER</h2><p>在IE8和IE8以前，IE是只支持冒泡的，比如onclick onhover attachEvent这些都是冒泡绑定事件,但是后来就有了addEventListener,这个函数最大的不同就是有第三个参数来决定是冒泡阶段发生还是捕获阶段发生。</p>
-<pre><code>addEventListener(event,handle,capture)
-</code></pre><p>第三个参数是一个布尔值，默认是false，指事件在冒泡阶段发生。设置为true时，事件会在捕获阶段发生。</p>
-<p>但是需要注意的一点，在jquery中是没有这种参数的，因为jquery只支持冒泡，所以我们需要在捕获阶段出发事件还是得用js的addEventListener。</p>
-<p>但是有时候我们不需要冒泡阶段，也就是我们在某些事件中，不需要向外扩散事件。这时候可以用W3C的标准阻止冒泡方法：</p>
-<pre><code>event.stopPropagation();
-</code></pre><p>这个函数在js和jquery中都是通用的。</p>
+        <h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><p>在flex布局中，容器的子元素称之为项目：item，他有6个flex属性：</p>
+<ul>
+<li>order</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+<li>flex</li>
+<li>align-self</li>
+</ul>
+<h3 id="order"><a href="#order" class="headerlink" title="order"></a>order</h3><p>order属性定义项目的排列顺序。</p>
+<pre><code>.item {
+    order: 2
+}
+</code></pre><p>order的数值越小，那么它的排列位置就越靠前：</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png" alt=""></p>
+<h3 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h3><p>flex-grow属性定义项目的放大比例，默认是0，这个属性需要在主轴上存在空余的空间才可以生效，0代表不放大。</p>
+<pre><code>.item {
+  flex-grow: &lt;number&gt;; /* default 0 */
+}
+</code></pre><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071014.png" alt=""></p>
+<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<h3 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h3><p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<pre><code>.item {
+  flex-shrink: &lt;number&gt;; /* default 1 */
+}
+</code></pre><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg" alt=""></p>
+<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。<br>负值对该属性无效。</p>
+<h3 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h3><p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。 </p>
+<pre><code>.item {
+  flex-basis: &lt;length&gt; | auto; /* default auto */
+}
+</code></pre><p>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
+<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</p>
+<pre><code>.item {
+  flex: none | [ &lt;&apos;flex-grow&apos;&gt; &lt;&apos;flex-shrink&apos;&gt;? || &lt;&apos;flex-basis&apos;&gt; ]
+}
+</code></pre><p>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
+<h3 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h3><p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
+<pre><code>.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+</code></pre><p><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071016.png" alt=""> </p>
+<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
 
       
     </div>
@@ -362,7 +437,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag">#js</a>
+            <a href="/tags/css/" rel="tag">#css</a>
           
         </div>
       
@@ -371,17 +446,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/15/使用gulp和compass结合开发项目/" rel="next" title="使用gulp和compass结合开发项目">
-                <i class="fa fa-chevron-left"></i> 使用gulp和compass结合开发项目
+              <a href="/2016/07/29/flex布局简单入门/" rel="next" title="flex布局简单入门">
+                <i class="fa fa-chevron-left"></i> flex布局简单入门
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/19/JS数组操作/" rel="prev" title="JS数组操作">
-                JS数组操作 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -407,8 +478,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/16/冒泡与捕获/"
-           data-title="冒泡与捕获" data-url="http://yoursite.com/2016/06/16/冒泡与捕获/">
+      <div class="ds-thread" data-thread-key="2016/07/31/flex布局简单入门-二/"
+           data-title="flex布局简单入门(二)" data-url="http://yoursite.com/2016/07/31/flex布局简单入门-二/">
       </div>
     
   </div>
@@ -499,7 +570,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理三个阶段"><span class="nav-number">1.</span> <span class="nav-text">事件处理三个阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADDEVENTLISTENER"><span class="nav-number">2.</span> <span class="nav-text">ADDEVENTLISTENER</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目"><span class="nav-number">1.</span> <span class="nav-text">项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#order"><span class="nav-number">1.1.</span> <span class="nav-text">order</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-grow"><span class="nav-number">1.2.</span> <span class="nav-text">flex-grow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-shrink"><span class="nav-number">1.3.</span> <span class="nav-text">flex-shrink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-basis"><span class="nav-number">1.4.</span> <span class="nav-text">flex-basis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex"><span class="nav-number">1.5.</span> <span class="nav-text">flex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-self"><span class="nav-number">1.6.</span> <span class="nav-text">align-self</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
