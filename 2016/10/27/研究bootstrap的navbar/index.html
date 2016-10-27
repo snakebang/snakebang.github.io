@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="scss," />
+  <meta name="keywords" content="css," />
 
 
 
@@ -84,22 +84,40 @@
 
 
 
-<meta name="description" content="Compass我觉得是很好用的一款用来编译scss的工具，和scss一样，他使用ruby写的，所以要用ruby安装。ruby安装包去网上就可以下载，几十兆而已，但是我用ruby安装scss和compass就很烦人了，下载资源的服务器被墙了，下不了，所以需要搭梯子，你懂的。
-怎样把COMPASS用到自己的项目中我在官网看到是的是这样的命令
-compass create &amp;quot;new proje">
+<meta name="description" content="解读NavbarBootstrap的navbar，用bootstrap制作响应式网站肯定会用的到，这里来研究一下：
+最外层包裹的是类名为navbar的div：
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+有两">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Compass编译Scss">
-<meta property="og:url" content="http://yoursite.com/2016/06/04/使用Compass编译Sass/index.html">
+<meta property="og:title" content="研究bootstrap的navbar">
+<meta property="og:url" content="http://yoursite.com/2016/10/27/研究bootstrap的navbar/index.html">
 <meta property="og:site_name" content="Snake Bang 的小本本">
-<meta property="og:description" content="Compass我觉得是很好用的一款用来编译scss的工具，和scss一样，他使用ruby写的，所以要用ruby安装。ruby安装包去网上就可以下载，几十兆而已，但是我用ruby安装scss和compass就很烦人了，下载资源的服务器被墙了，下不了，所以需要搭梯子，你懂的。
-怎样把COMPASS用到自己的项目中我在官网看到是的是这样的命令
-compass create &amp;quot;new proje">
-<meta property="og:updated_time" content="2016-07-11T12:18:02.233Z">
+<meta property="og:description" content="解读NavbarBootstrap的navbar，用bootstrap制作响应式网站肯定会用的到，这里来研究一下：
+最外层包裹的是类名为navbar的div：
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+有两">
+<meta property="og:updated_time" content="2016-10-27T01:48:20.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Compass编译Scss">
-<meta name="twitter:description" content="Compass我觉得是很好用的一款用来编译scss的工具，和scss一样，他使用ruby写的，所以要用ruby安装。ruby安装包去网上就可以下载，几十兆而已，但是我用ruby安装scss和compass就很烦人了，下载资源的服务器被墙了，下不了，所以需要搭梯子，你懂的。
-怎样把COMPASS用到自己的项目中我在官网看到是的是这样的命令
-compass create &amp;quot;new proje">
+<meta name="twitter:title" content="研究bootstrap的navbar">
+<meta name="twitter:description" content="解读NavbarBootstrap的navbar，用bootstrap制作响应式网站肯定会用的到，这里来研究一下：
+最外层包裹的是类名为navbar的div：
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+有两">
 
 
 
@@ -120,9 +138,9 @@ compass create &amp;quot;new proje">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/04/使用Compass编译Sass/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/27/研究bootstrap的navbar/"/>
 
-  <title> 使用Compass编译Scss | Snake Bang 的小本本 </title>
+  <title> 研究bootstrap的navbar | Snake Bang 的小本本 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +280,7 @@ compass create &amp;quot;new proje">
             
             
               
-                使用Compass编译Scss
+                研究bootstrap的navbar
               
             
           </h1>
@@ -274,8 +292,8 @@ compass create &amp;quot;new proje">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-04T22:10:24+08:00" content="2016-06-04">
-              2016-06-04
+            <time itemprop="dateCreated" datetime="2016-10-27T08:59:07+08:00" content="2016-10-27">
+              2016-10-27
             </time>
           </span>
 
@@ -288,8 +306,8 @@ compass create &amp;quot;new proje">
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/scss/" itemprop="url" rel="index">
-                    <span itemprop="name">scss</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -304,8 +322,8 @@ compass create &amp;quot;new proje">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/04/使用Compass编译Sass/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/04/使用Compass编译Sass/" itemprop="commentsCount"></span>
+                <a href="/2016/10/27/研究bootstrap的navbar/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/27/研究bootstrap的navbar/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -328,45 +346,79 @@ compass create &amp;quot;new proje">
       
 
       
-        <p>Compass我觉得是很好用的一款用来编译scss的工具，和scss一样，他使用ruby写的，所以要用ruby安装。ruby安装包去网上就可以下载，几十兆而已，但是我用ruby安装scss和compass就很烦人了，下载资源的服务器被墙了，下不了，所以需要搭梯子，你懂的。</p>
-<h2 id="怎样把COMPASS用到自己的项目中"><a href="#怎样把COMPASS用到自己的项目中" class="headerlink" title="怎样把COMPASS用到自己的项目中"></a>怎样把COMPASS用到自己的项目中</h2><p>我在官网看到是的是这样的命令</p>
-<pre><code>compass create &quot;new project&quot;
-</code></pre><p>这个命令式创建一个项目文件夹，里面有stylesheet文件夹和sass文件夹还有comfig.rb文件。</p>
-<pre><code>.sass-cache
-stylesheet
-sass
-ie.scss
-screen.scss
-print.scss
-config.rb
-</code></pre><p>看似人性化，其实一点都不好，我用不到啊！<br>我有去尝试一下另一个命令：</p>
-<pre><code>compass init
-</code></pre><p>我以为这次不会再乱创建文件夹了，结果还是创建了，唯一的不同是不会再生成项目文件夹，而是直接在你当前路径生成这些文件夹，还是没用啊，删除。<br>看了看compass help 命令提示，最后我终于知道到了不生成文件夹的配置方法：</p>
-<pre><code>compass config
-</code></pre><p>这次它就不会生成各种文件夹了，只会帮你在当前路径生成一个config文件夹和一个config.rb：</p>
-<pre><code>http_path = &quot;/&quot;
-css_dir = &quot;stylesheets&quot;
-sass_dir = &quot;sass&quot;
-images_dir = &quot;images&quot;
-javascripts_dir = &quot;javascripts&quot;
-</code></pre><p>你要做的之间改一改你的config.rb,把哪些参数的值改成你的路径，就可以了哦。比如我的：</p>
-<pre><code>http_path = &quot;/&quot;
-css_dir = &quot;dist/css&quot;
-sass_dir = &quot;style/scss&quot;
-images_dir = &quot;images&quot;
-javascripts_dir = &quot;dist/js&quot;
-</code></pre><p>然后执行：</p>
-<pre><code>compass watch
-</code></pre><p>OK！已经完成监听了，你可以随便写你的scss了，记得保存，后台会自己编译到指定文件夹的。如果找不到配置文件中的文件夹，会自动创建的。</p>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>你的images_dir参数是你的默认图片保存位置，如果你是用compass的sprite图片功能，比如你的图片放在 images/icon/*.png ，这个时候你在scss文件中引入：</p>
-<pre><code>@import &quot;images/icon/*.png&quot;;
-</code></pre><p>会报错的，因为你有images_dir参数啊，他会默认帮你加上这个路径的，虽然有点多此一举，所以你应该这么引入：</p>
-<pre><code>@import &quot;icon/*.png&quot;;
-</code></pre><p>最好在加上一个配置变量，我是这么用的：</p>
-<pre><code>$icon-layout: smart; \\用智能模式生成sprite图
-@import &quot;icon/*.png&quot;;
-@include all-icon-sprites; \\生成所有的sprite图样式类
-</code></pre>
+        <h2 id="解读Navbar"><a href="#解读Navbar" class="headerlink" title="解读Navbar"></a>解读Navbar</h2><p>Bootstrap的navbar，用bootstrap制作响应式网站肯定会用的到，这里来研究一下：</p>
+<p>最外层包裹的是类名为navbar的div：</p>
+<pre><code>.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+</code></pre><p>有两种主题可以选，navbar-default\navbar-inverse(反色)，有边框颜色，背景颜色</p>
+<pre><code>.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+</code></pre><p>大屏幕中有圆角边框，使用navbar-fixed-top\bottom后消失</p>
+<pre><code>@media (min-width: 768px)
+.navbar {
+    border-radius: 4px;
+}
+</code></pre><p>navbar-header是navbar的子元素，左浮动，内有nabar-toggle和navbar-brand两个子元素，navbar-toggle在大屏幕中隐藏。<br>当屏幕小于768px,navbar-header不再浮动，而是占满navbar，此时navbar-toggle右浮动，navbar-collapse隐藏。 </p>
+<pre><code>@media (min-width: 768px)
+.navbar-header {
+    float: left;
+}
+
+@media (min-width: 768px)
+.navbar-collapse.collapse {
+    display: block!important;
+    height: auto!important;
+    padding-bottom: 0;
+    overflow: visible!important;
+}
+</code></pre><p>navbar-toggle大小为44x34,有8px 15px 8px 0 的margin。</p>
+<pre><code>.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+} 
+</code></pre><p>navbar-brand有特定的高度：</p>
+<pre><code>.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+</code></pre><p>navbar-collapse在大屏幕中是block元素，默认占满navbar，它可以有navbar-nav元素，这些元素默认都是左浮动，可以设置navbar-left/navbar-right来让它左右浮动。</p>
+<h2 id="定制Navbar"><a href="#定制Navbar" class="headerlink" title="定制Navbar"></a>定制Navbar</h2><p>navbar元素内可以有container，让navbar看起来窄一点。</p>
+<p>navbar-brand有50px的高度，并且有15px的padding，其实它content的高度为20px，并且有20px的line-height,我们可以修改它的高度为我们想要的高度：</p>
+<pre><code>.navbar-brand {
+       display: block;
+       padding: 10px 15px;
+       height: 86px;
+       line-height: 66px;
+}
+</code></pre><p>navbar-brand的高度撑开了navbar，会让其它元素的显示显得怪异，所以我们要撑开其它的元素，比如navbar-nav里的a,我们需要合理的设置它的line-height:</p>
+<pre><code>.navbar-default .navbar-nav&gt;li&gt;a {
+    color: #777;
+    line-height: 56px;
+}
+</code></pre><p>默认情况下，a有15px的padding。</p>
+<p>对于navbar-toggle与navbar-form,我们需要设置它们的margin-top来达到垂直居中的目的。</p>
+<p>对于其它不必要的元素，我们需要设置hidden-xs/hidden-sm/hidden-md来让它们不要出现在小屏幕中。</p>
+
       
     </div>
 
@@ -388,7 +440,7 @@ javascripts_dir = &quot;dist/js&quot;
       
         <div class="post-tags">
           
-            <a href="/tags/scss/" rel="tag">#scss</a>
+            <a href="/tags/css/" rel="tag">#css</a>
           
         </div>
       
@@ -397,17 +449,13 @@ javascripts_dir = &quot;dist/js&quot;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/03/响应式侧拉导航栏/" rel="next" title="响应式侧拉导航栏">
-                <i class="fa fa-chevron-left"></i> 响应式侧拉导航栏
+              <a href="/2016/10/21/奔波在武汉的一周/" rel="next" title="奔波在武汉的一周">
+                <i class="fa fa-chevron-left"></i> 奔波在武汉的一周
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/05/修改瀑布流插件PointerestGrid/" rel="prev" title="修改瀑布流插件PointerestGrid">
-                修改瀑布流插件PointerestGrid <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -433,8 +481,8 @@ javascripts_dir = &quot;dist/js&quot;
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/04/使用Compass编译Sass/"
-           data-title="使用Compass编译Scss" data-url="http://yoursite.com/2016/06/04/使用Compass编译Sass/">
+      <div class="ds-thread" data-thread-key="2016/10/27/研究bootstrap的navbar/"
+           data-title="研究bootstrap的navbar" data-url="http://yoursite.com/2016/10/27/研究bootstrap的navbar/">
       </div>
     
   </div>
@@ -525,7 +573,7 @@ javascripts_dir = &quot;dist/js&quot;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#怎样把COMPASS用到自己的项目中"><span class="nav-number">1.</span> <span class="nav-text">怎样把COMPASS用到自己的项目中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">2.</span> <span class="nav-text">注意事项</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解读Navbar"><span class="nav-number">1.</span> <span class="nav-text">解读Navbar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定制Navbar"><span class="nav-number">2.</span> <span class="nav-text">定制Navbar</span></a></li></ol></div>
             
           </div>
         </section>
